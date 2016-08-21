@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.CustomerDao">
+	 <select id="getCustomerByName" parameterType="customer" resultType="customer">
+		 <![CDATA[
+		 	select * from customer where first_name = #{first_name} and last_name = #{last_name}
+		 ]]>
+	 </select>
+	 
+	<!--  <resultMap type="customer" id="customerMap">
+	 	<
+	 </resultMap> -->
+	 <select id="getCustomers" resultType="customer">
+	 	select * from customer
+	 </select>
+	 
+	 <select id="getAddresses" resultType="address">
+	 	<![CDATA[
+		 	select * from address
+		 ]]>
+	 </select>
+	 <insert id="insertCustomer" useGeneratedKeys="true" keyProperty="customer_id" 
+	  	parameterType="customer" statementType="PREPARED" >
+	 	<![CDATA[
+		 	insert into customer(store_id,first_name,last_name,email,address_id,create_date) values(#{store_id},#{first_name},#{last_name},#{email},#{address_id},#{create_date})
+		 ]]>
+	 </insert>
+ </mapper>
