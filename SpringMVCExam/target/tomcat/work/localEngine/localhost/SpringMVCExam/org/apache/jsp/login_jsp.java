@@ -112,11 +112,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       out.write("/login.do\" method=\"post\" class=\"login-form\">\r\n");
       out.write("\t\t\t                    \t<div class=\"form-group\">\r\n");
       out.write("\t\t\t                    \t\t<label class=\"sr-only\" for=\"form-username\">Username</label>\r\n");
-      out.write("\t\t\t                        \t<input type=\"text\" name=\"username\" placeholder=\"Username...\" class=\"form-username form-control\" id=\"form-username\">\r\n");
+      out.write("\t\t\t                        \t<input type=\"text\" name=\"username\" placeholder=\"Username...\" class=\"form-username form-control\" id=\"form-username\" required>\r\n");
       out.write("\t\t\t                        </div>\r\n");
       out.write("\t\t\t                        <div class=\"form-group\">\r\n");
       out.write("\t\t\t                        \t<label class=\"sr-only\" for=\"form-password\">Password</label>\r\n");
-      out.write("\t\t\t                        \t<input type=\"password\" name=\"password\" placeholder=\"Password...\" class=\"form-password form-control\" id=\"form-password\">\r\n");
+      out.write("\t\t\t                        \t<input type=\"password\" name=\"password\" placeholder=\"Password...\" class=\"form-password form-control\" id=\"form-password\" required>\r\n");
       out.write("\t\t\t                        </div>\r\n");
       out.write("\t\t\t                        <button type=\"submit\" class=\"btn\">Sign in!</button>\r\n");
       out.write("\t\t\t                    </form>\r\n");
